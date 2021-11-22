@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/pwa-192x192.png">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+      ! function() {
+        var e = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches,
+          t = localStorage.getItem("vueuse-color-scheme") || "auto";
+        ("dark" === t || e && "light" !== t) && document.documentElement.classList.toggle("dark", !0)
+      }()
+    </script>
+    <script type="text/javascript" src="https://widgets.rubic.exchange/iframe/bundle.min.js"></script>
+    <script type="module" async="" crossorigin="" src="/assets/app.40e7ff3f.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.156592a8.js">
+    <style>
+      *,
+      :after,
+      :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb
+      }
+
+      * {
+        --tw-ring-inset: var(--tw-empty, );
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, .5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000
+      }
+
+      :root {
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4
+      }
+
+      a {
+        color: inherit;
+        text-decoration: inherit
+      }
+
+      body {
+        margin: 0;
+        font-family: inherit;
+        line-height: inherit
+      }
+
+      b {
+        font-weight: bolder
+      }
+
+      [role=button] {
+        cursor: pointer
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        line-height: 1.5
+      }
+
+      dd,
+      dl,
+      h1,
+      h2,
+      h3,
+      p,
+      pre {
+        margin: 0
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-size: inherit;
+        font-weight: inherit
+      }
+
+      img {
+        border-style: solid;
+        max-width: 100%;
+        height: auto
+      }
+
+      iframe,
+      img,
+      svg {
+        display: block;
+        vertical-align: middle
+      }
+
+      pre {
+        font-size: 1em;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+      }
+
+      .prose {
+        color: inherit;
+        max-width: 65ch;
+        font-size: 1rem;
+        line-height: 1.75
+      }
+
+      .prose a {
+        color: inherit;
+        text-decoration: underline;
+        font-weight: 500
+      }
+
+      .prose a:hover {
+        color: #0d9488
+      }
+
+      .prose h1 {
+        color: inherit;
+        font-weight: 800;
+        font-size: 2.25em;
+        margin-top: 0;
+        margin-bottom: .8888889em;
+        line-height: 1.1111111
+      }
+
+      .prose h2 {
+        color: inherit;
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.3333333
+      }
+
+      .prose pre {
+        color: #e5e7eb;
+        background-color: #1f2937;
+        overflow-x: auto;
+        font-size: .875em;
+        line-height: 1.7142857;
+        margin-top: 1.7142857em;
+        margin-bottom: 1.7142857em;
+        border-radius: .375rem;
+        padding: .8571429em 1.1428571em
+      }
+
+      .prose p {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em
+      }
+
+      .prose img {
+        margin-top: 2em;
+        margin-bottom: 2em
+      }
+
+      .prose h2+* {
+        margin-top: 0
+      }
+
+      .prose>:first-child {
+        margin-top: 0
+      }
+
+      .prose>:last-child {
+        margin-bottom: 0
+      }
+
+      .prose b {
+        color: inherit
+      }
+
+      .prose-xl {
+        font-size: 1.25rem;
+        line-height: 1.8
+      }
+
+      .prose-xl p {
+        margin-top: 1.2em;
+        margin-bottom: 1.2em
+      }
+
+      .prose-xl h2 {
+        font-size: 1.8em;
+        margin-top: 1.5555556em;
+        margin-bottom: .8888889em;
+        line-height: 1.1111111
+      }
+
+      .prose-xl h2+* {
+        margin-top: 0
+      }
+
+      .prose-xl>:first-child {
+        margin-top: 0
+      }
+
+      .prose-xl>:last-child {
+        margin-bottom: 0
+      }
+
+      @media (min-width:768px) {
+        .md\:prose-xl {
+          font-size: 1.25rem;
+          line-height: 1.8
+        }
+
+        .md\:prose-xl p {
+          margin-top: 1.2em;
+          margin-bottom: 1.2em
+        }
+
+        .md\:prose-xl h1 {
+          font-size: 2.8em;
+          margin-top: 0;
+          margin-bottom: .8571429em;
+          line-height: 1
+        }
+
+        .md\:prose-xl img {
+          margin-top: 2em;
+          margin-bottom: 2em
+        }
+
+        .md\:prose-xl pre {
+          font-size: .9em;
+          line-height: 1.7777778;
+          margin-top: 2em;
+          margin-bottom: 2em;
+          border-radius: .5rem;
+          padding: 1.1111111em 1.3333333em
+        }
+
+        .md\:prose-xl>:first-child {
+          margin-top: 0
+        }
+
+        .md\:prose-xl>:last-child {
+          margin-bottom: 0
+        }
+      }
+
+      :root {
+        --prism-scheme: light;
+        --prism-foreground: #6e6e6e;
+        --prism-background: #f4f4f4;
+        --prism-comment: #a8a8a8;
+        --prism-string: #555555;
+        --prism-literal: #333333;
+        --prism-keyword: #000000;
+        --prism-function: #4f4f4f;
+        --prism-deleted: #333333;
+        --prism-class: #333333;
+        --prism-builtin: #757575;
+        --prism-property: #333333;
+        --prism-namespace: #4f4f4f;
+        --prism-punctuation: #ababab;
+        --prism-decorator: var(--prism-class);
+        --prism-operator: var(--prism-punctuation);
+        --prism-number: var(--prism-literal);
+        --prism-boolean: var(--prism-literal);
+        --prism-variable: var(--prism-literal);
+        --prism-constant: var(--prism-literal);
+        --prism-symbol: var(--prism-literal);
+        --prism-interpolation: var(--prism-literal);
+        --prism-selector: var(--prism-keyword);
+        --prism-keyword-control: var(--prism-keyword);
+        --prism-regex: var(--prism-string);
+        --prism-json-property: var(--prism-property);
+        --prism-inline-background: var(--prism-background);
+        --prism-comment-style: italic;
+        --prism-url-decoration: underline;
+        --prism-line-number: #a5a5a5;
+        --prism-line-number-gutter: #333333;
+        --prism-line-highlight-background: #eeeeee;
+        --prism-selection-background: #aaaaaa;
+        --prism-marker-color: var(--prism-foreground);
+        --prism-marker-opacity: .4;
+        --prism-marker-font-size: .8em;
+        --prism-font-size: 1em;
+        --prism-line-height: 1.5em;
+        --prism-font-family: monospace;
+        --prism-inline-font-size: var(--prism-font-size);
+        --prism-block-font-size: var(--prism-font-size);
+        --prism-tab-size: 2;
+        --prism-block-padding-x: 1em;
+        --prism-block-padding-y: 1em;
+        --prism-block-margin-x: 0;
+        --prism-block-margin-y: .5em;
+        --prism-block-radius: .3em;
+        --prism-inline-padding-x: .3em;
+        --prism-inline-padding-y: .1em;
+        --prism-inline-radius: .3em
+      }
+
+      .prose {
+        --prism-font-family: "Input Mono", monospace
+      }
+
+      .prose img {
+        width: 100%
+      }
+
+      html:not(.dark) .prose {
+        --prism-foreground: #393a34;
+        --prism-background: #fbfbfb;
+        --prism-comment: #a0ada0;
+        --prism-string: #b56959;
+        --prism-literal: #2f8a89;
+        --prism-number: #296aa3;
+        --prism-keyword: #1c6b48;
+        --prism-function: #6c7834;
+        --prism-boolean: #1c6b48;
+        --prism-constant: #a65e2b;
+        --prism-deleted: #a14f55;
+        --prism-class: #2993a3;
+        --prism-builtin: #ab5959;
+        --prism-property: #b58451;
+        --prism-namespace: #b05a78;
+        --prism-punctuation: #8e8f8b;
+        --prism-decorator: #bd8f8f;
+        --prism-regex: #ab5e3f;
+        --prism-json-property: #698c96
+      }
+
+      #app,
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0
+      }
+
+      .prose.prose a:hover {
+        --tw-text-opacity: 1;
+        color: rgba(169, 140, 49, var(--tw-text-opacity))
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0
+      }
+
+      .bg-gray-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgba(243, 244, 246, var(--tw-bg-opacity))
+      }
+
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+      }
+
+      .bg-gray-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgba(249, 250, 251, var(--tw-bg-opacity))
+      }
+
+      .bg-doge-500 {
+        --tw-bg-opacity: 1;
+        background-color: rgba(41, 149, 241, var(--tw-bg-opacity))
+      }
+
+      .hover\:bg-blue-gray-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgba(51, 65, 85, var(--tw-bg-opacity))
+      }
+
+      .hover\:bg-doge-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgba(169, 140, 49, var(--tw-bg-opacity))
+      }
+
+      .border-transparent {
+        border-color: transparent
+      }
+
+      .rounded-full {
+        border-radius: 9999px
+      }
+
+      .rounded-2xl {
+        border-radius: 1rem
+      }
+
+      .rounded-md {
+        border-radius: .375rem
+      }
+
+      .rounded-lg {
+        border-radius: .5rem
+      }
+
+      .rounded-r-3xl {
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem
+      }
+
+      .border {
+        border-width: 1px
+      }
+
+      .block {
+        display: block
+      }
+
+      .inline-block {
+        display: inline-block
+      }
+
+      .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex
+      }
+
+      .inline-flex {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+        display: inline-flex
+      }
+
+      .grid {
+        display: -ms-grid;
+        display: grid
+      }
+
+      .hidden {
+        display: none
+      }
+
+      .flex-col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column
+      }
+
+      .flex-wrap {
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap
+      }
+
+      .items-center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center
+      }
+
+      .justify-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center
+      }
+
+      .justify-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between
+      }
+
+      .flex-1 {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0%;
+        -webkit-flex: 1 1 0%;
+        flex: 1 1 0%
+      }
+
+      .flex-grow {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        -webkit-flex-grow: 1;
+        flex-grow: 1
+      }
+
+      .flex-shrink-0 {
+        -ms-flex-negative: 0;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0
+      }
+
+      .flex-shrink {
+        -ms-flex-negative: 1;
+        -webkit-flex-shrink: 1;
+        flex-shrink: 1
+      }
+
+      .order-2 {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2
+      }
+
+      .order-1 {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1
+      }
+
+      .font-extrabold {
+        font-weight: 800
+      }
+
+      .font-medium {
+        font-weight: 500
+      }
+
+      .font-extralight {
+        font-weight: 200
+      }
+
+      .font-bold {
+        font-weight: 700
+      }
+
+      .h-full {
+        height: 100%
+      }
+
+      .h-32 {
+        height: 8rem
+      }
+
+      .\!h-8 {
+        height: 2rem !important
+      }
+
+      .h-24 {
+        height: 6rem
+      }
+
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem
+      }
+
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem
+      }
+
+      .text-sm {
+        font-size: .875rem;
+        line-height: 1.25rem
+      }
+
+      .text-xs {
+        font-size: .75rem;
+        line-height: 1rem
+      }
+
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
+      }
+
+      .text-8xl {
+        font-size: 6rem;
+        line-height: 1
+      }
+
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem
+      }
+
+      .leading-6 {
+        line-height: 1.5rem
+      }
+
+      .m-auto {
+        margin: auto
+      }
+
+      .\!m-0 {
+        margin: 0 !important
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto
+      }
+
+      .my-12 {
+        margin-top: 3rem;
+        margin-bottom: 3rem
+      }
+
+      .my-4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem
+      }
+
+      .-mx-5 {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem
+      }
+
+      .-my-2 {
+        margin-top: -.5rem;
+        margin-bottom: -.5rem
+      }
+
+      .my-6 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem
+      }
+
+      .\!my-2 {
+        margin-top: .5rem !important;
+        margin-bottom: .5rem !important
+      }
+
+      .mt-3 {
+        margin-top: .75rem
+      }
+
+      .mt-1 {
+        margin-top: .25rem
+      }
+
+      .mt-4 {
+        margin-top: 1rem
+      }
+
+      .mt-8 {
+        margin-top: 2rem
+      }
+
+      .\!mt-12 {
+        margin-top: 3rem !important
+      }
+
+      .\!mr-2 {
+        margin-right: .5rem !important
+      }
+
+      .mr-2 {
+        margin-right: .5rem
+      }
+
+      .mr-3 {
+        margin-right: .75rem
+      }
+
+      .-ml-3 {
+        margin-left: -.75rem
+      }
+
+      .-mt-72 {
+        margin-top: -18rem
+      }
+
+      .mt-6 {
+        margin-top: 1.5rem
+      }
+
+      .mt-12 {
+        margin-top: 3rem
+      }
+
+      .mt-10 {
+        margin-top: 2.5rem
+      }
+
+      .mt-2 {
+        margin-top: .5rem
+      }
+
+      .mb-8 {
+        margin-bottom: 2rem
+      }
+
+      .mr-1 {
+        margin-right: .25rem
+      }
+
+      .max-w-4xl {
+        max-width: 56rem
+      }
+
+      .max-w-full {
+        max-width: 100%
+      }
+
+      .max-w-7xl {
+        max-width: 80rem
+      }
+
+      .max-w-md {
+        max-width: 28rem
+      }
+
+      .max-w-2xl {
+        max-width: 42rem
+      }
+
+      .max-w-64 {
+        max-width: 16rem
+      }
+
+      .min-h-full {
+        min-height: 100%
+      }
+
+      .min-h-1xl {
+        min-height: 32rem
+      }
+
+      .object-cover {
+        -o-object-fit: cover;
+        object-fit: cover
+      }
+
+      .group:hover .group-hover\:opacity-75 {
+        opacity: .75
+      }
+
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px
+      }
+
+      .overflow-hidden {
+        overflow: hidden
+      }
+
+      .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem
+      }
+
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem
+      }
+
+      .px-5 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem
+      }
+
+      .py-2 {
+        padding-top: .5rem;
+        padding-bottom: .5rem
+      }
+
+      .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem
+      }
+
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+      }
+
+      .py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem
+      }
+
+      .py-3 {
+        padding-top: .75rem;
+        padding-bottom: .75rem
+      }
+
+      .px-2 {
+        padding-left: .5rem;
+        padding-right: .5rem
+      }
+
+      .pointer-events-none {
+        pointer-events: none
+      }
+
+      .absolute {
+        position: absolute
+      }
+
+      .relative {
+        position: relative
+      }
+
+      .inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0
+      }
+
+      .inset-y-0 {
+        top: 0;
+        bottom: 0
+      }
+
+      .left-0 {
+        left: 0
+      }
+
+      .top-8 {
+        top: 2rem
+      }
+
+      .left-1\/2 {
+        left: 50%
+      }
+
+      .shadow-xl {
+        --tw-shadow-color: 0, 0, 0;
+        --tw-shadow: 0 20px 25px -5px rgba(var(--tw-shadow-color), .1), 0 10px 10px -5px rgba(var(--tw-shadow-color), .04);
+        -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+      }
+
+      .shadow {
+        --tw-shadow-color: 0, 0, 0;
+        --tw-shadow: 0 1px 3px 0 rgba(var(--tw-shadow-color), .1), 0 1px 2px 0 rgba(var(--tw-shadow-color), .06);
+        -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+      }
+
+      .shadow-sm {
+        --tw-shadow-color: 0, 0, 0;
+        --tw-shadow: 0 1px 2px 0 rgba(var(--tw-shadow-color), .05);
+        -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+      }
+
+      .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+      }
+
+      .focus-within\:ring-2:focus-within {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+      }
+
+      .focus\:ring-offset-doge-700:focus {
+        --tw-ring-offset-opacity: 1;
+        --tw-ring-offset-color: rgba(169, 140, 49, var(--tw-ring-offset-opacity))
+      }
+
+      .focus-within\:ring-offset-gray-100:focus-within {
+        --tw-ring-offset-opacity: 1;
+        --tw-ring-offset-color: rgba(243, 244, 246, var(--tw-ring-offset-opacity))
+      }
+
+      .focus\:ring-offset-2:focus {
+        --tw-ring-offset-width: 2px
+      }
+
+      .focus-within\:ring-offset-2:focus-within {
+        --tw-ring-offset-width: 2px
+      }
+
+      .focus\:ring-blue-gray-700:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgba(51, 65, 85, var(--tw-ring-opacity))
+      }
+
+      .focus-within\:ring-indigo-500:focus-within {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgba(99, 102, 241, var(--tw-ring-opacity))
+      }
+
+      .focus\:ring-doge-500:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgba(217, 189, 98, var(--tw-ring-opacity))
+      }
+
+      [fill~=none] {
+        fill: none
+      }
+
+      .text-center {
+        text-align: center
+      }
+
+      .text-gray-900 {
+        --tw-text-opacity: 1;
+        color: rgba(17, 24, 39, var(--tw-text-opacity))
+      }
+
+      .text-gray-700 {
+        --tw-text-opacity: 1;
+        color: rgba(55, 65, 81, var(--tw-text-opacity))
+      }
+
+      .text-gray-500 {
+        --tw-text-opacity: 1;
+        color: rgba(107, 114, 128, var(--tw-text-opacity))
+      }
+
+      .hover\:text-gray-900:hover {
+        --tw-text-opacity: 1;
+        color: rgba(17, 24, 39, var(--tw-text-opacity))
+      }
+
+      .text-gray-400 {
+        --tw-text-opacity: 1;
+        color: rgba(156, 163, 175, var(--tw-text-opacity))
+      }
+
+      .text-gray-200 {
+        --tw-text-opacity: 1;
+        color: rgba(229, 231, 235, var(--tw-text-opacity))
+      }
+
+      .text-doge-200 {
+        --tw-text-opacity: 1;
+        color: rgba(215, 203, 168, var(--tw-text-opacity))
+      }
+
+      .text-doge-700 {
+        --tw-text-opacity: 1;
+        color: rgba(169, 140, 49, var(--tw-text-opacity))
+      }
+
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgba(255, 255, 255, var(--tw-text-opacity))
+      }
+
+      .hover\:text-white:hover {
+        --tw-text-opacity: 1;
+        color: rgba(255, 255, 255, var(--tw-text-opacity))
+      }
+
+      .\!text-white {
+        --tw-text-opacity: 1 !important;
+        color: rgba(255, 255, 255, var(--tw-text-opacity)) !important
+      }
+
+      .text-opacity-40 {
+        --tw-text-opacity: .4
+      }
+
+      .underline {
+        -webkit-text-decoration-line: underline;
+        text-decoration-line: underline
+      }
+
+      .\!no-underline {
+        text-decoration: none !important
+      }
+
+      .tracking-tight {
+        letter-spacing: -.025em
+      }
+
+      .w-prose {
+        width: 65ch
+      }
+
+      .w-32 {
+        width: 8rem
+      }
+
+      .\!w-8 {
+        width: 2rem !important
+      }
+
+      .w-full {
+        width: 100%
+      }
+
+      .w-1\/2 {
+        width: 50%
+      }
+
+      .w-5\/6 {
+        width: 83.333333%
+      }
+
+      .w-60 {
+        width: 15rem
+      }
+
+      .w-24 {
+        width: 6rem
+      }
+
+      .gap-x-4 {
+        -webkit-column-gap: 1rem;
+        -moz-column-gap: 1rem;
+        grid-column-gap: 1rem;
+        column-gap: 1rem
+      }
+
+      .gap-y-8 {
+        -webkit-row-gap: 2rem;
+        -moz-row-gap: 2rem;
+        grid-row-gap: 2rem;
+        row-gap: 2rem
+      }
+
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr))
+      }
+
+      .col-span-1 {
+        -ms-grid-column-span: span 1/span 1;
+        grid-column: span 1/span 1
+      }
+
+      @media (min-width:640px) {
+        .sm\:block {
+          display: block
+        }
+
+        .sm\:flex {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex
+        }
+
+        .sm\:flex-wrap {
+          -ms-flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
+          flex-wrap: wrap
+        }
+
+        .sm\:justify-center {
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center
+        }
+
+        .sm\:text-4xl {
+          font-size: 2.25rem;
+          line-height: 2.5rem
+        }
+
+        .sm\:mx-auto {
+          margin-left: auto;
+          margin-right: auto
+        }
+
+        .sm\:-mt-32 {
+          margin-top: -8rem
+        }
+
+        .sm\:max-w-3xl {
+          max-width: 48rem
+        }
+
+        .sm\:max-w-lg {
+          max-width: 32rem
+        }
+
+        .sm\:px-6 {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem
+        }
+
+        .sm\:py-24 {
+          padding-top: 6rem;
+          padding-bottom: 6rem
+        }
+
+        .sm\:py-16 {
+          padding-top: 4rem;
+          padding-bottom: 4rem
+        }
+
+        .sm\:px-12 {
+          padding-left: 3rem;
+          padding-right: 3rem
+        }
+
+        .sm\:py-20 {
+          padding-top: 5rem;
+          padding-bottom: 5rem
+        }
+
+        .sm\:px-10 {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem
+        }
+
+        .sm\:text-center {
+          text-align: center
+        }
+
+        .sm\:gap-x-6 {
+          -webkit-column-gap: 1.5rem;
+          -moz-column-gap: 1.5rem;
+          grid-column-gap: 1.5rem;
+          column-gap: 1.5rem
+        }
+
+        .sm\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+
+        .sm\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+      }
+
+      @media (min-width:768px) {
+        .md\:flex-row {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          -webkit-flex-direction: row;
+          flex-direction: row
+        }
+
+        .md\:justify-end {
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          -webkit-justify-content: flex-end;
+          justify-content: flex-end
+        }
+
+        .\!md\:h-16 {
+          height: 4rem !important
+        }
+
+        .\!md\:mr-4 {
+          margin-right: 1rem !important
+        }
+
+        .md\:mt-0 {
+          margin-top: 0
+        }
+
+        .md\:text-left {
+          text-align: left
+        }
+
+        .\!md\:w-16 {
+          width: 4rem !important
+        }
+      }
+
+      @media (min-width:1024px) {
+        .lg\:max-w-7xl {
+          max-width: 80rem
+        }
+
+        .lg\:min-h-2xl {
+          min-height: 42rem
+        }
+
+        .lg\:px-8 {
+          padding-left: 2rem;
+          padding-right: 2rem
+        }
+
+        .lg\:py-20 {
+          padding-top: 5rem;
+          padding-bottom: 5rem
+        }
+
+        .lg\:px-0 {
+          padding-left: 0;
+          padding-right: 0
+        }
+
+        .lg\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+      }
+
+      @media (min-width:1280px) {
+        .xl\:w-4\/6 {
+          width: 66.666667%
+        }
+
+        .xl\:gap-x-8 {
+          -webkit-column-gap: 2rem;
+          -moz-column-gap: 2rem;
+          grid-column-gap: 2rem;
+          column-gap: 2rem
+        }
+      }
+    </style>
+    <link rel="preload" href="/assets/app.51f3ad5a.css" as="style">
+    <meta name="description" content="booonks">
+    <script hid="thesemetrics" src="https://unpkg.com/thesemetrics@latest" async="true" type="text/javascript"></script>
+    <meta name="head:count" content="2">
+    <title>GooseHonk 🐈🔨</title>
+  </head>
+  <body class="h-full">
+    <div id="app" data-server-rendered="true">
+      <div class="min-h-full">
+        <!--[-->
+        <div class="prose md:prose-xl text-center m-auto px-2 lg:px-0 mb-8">
+          <!--[-->
+          <div class="flex items-center md:flex-row flex-col text-center md:text-left">
+            <h1 class="!mt-12 flex-grow mx-auto flex items-center justify-left">
+              <!--[-->
+              <img src="6243304_0_prev_ui.png" class="!m-0 !mr-2 !md:mr-4 !w-8 !h-8 !md:w-16 !md:h-16" alt="logo"> GooseHonk
+              <!--]-->
+            </h1>
+            <nav class="flex justify-center md:justify-end flex-shrink mx-auto">
+              <a href="https://t.me/goosehonk" class="mr-2" target="_blank" rel="noopener noreferrer">
+                <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01c-.378.15-.577.298-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294c.26.006.549-.1.868-.32c2.179-1.471 3.304-2.214 3.374-2.23c.05-.012.12-.026.166.016c.047.041.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817c-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088c.327.216.589.393.85.571c.284.194.568.387.936.629c.093.06.183.125.27.187c.331.236.63.448.997.414c.214-.02.435-.22.547-.82c.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315a.337.337 0 0 0-.114-.217a.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="mr-2" target="_blank" rel="noopener noreferrer">
+                <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011a.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0a8.258 8.258 0 0 0-.412-.833a.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02a.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059a.051.051 0 0 0-.018-.011a8.875 8.875 0 0 1-1.248-.595a.05.05 0 0 1-.02-.066a.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085a8.254 8.254 0 0 1-1.249.594a.05.05 0 0 0-.03.03a.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019a13.235 13.235 0 0 0 4.001-2.02a.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612c0-.889.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613c0 .888-.637 1.612-1.438 1.612zm5.316 0c-.788 0-1.438-.724-1.438-1.612c0-.889.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613c0 .888-.631 1.612-1.438 1.612z"></path>
+                  </g>
+                </svg>
+              </a>
+              <a href="" class="mr-2" target="_blank" rel="noopener noreferrer">
+                <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306a.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487c-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0a.213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83c.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z"></path>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325c-.801-.573-1.9-.945-3.121-.993l.534-2.501l1.738.372a.83.83 0 1 0 .83-.869a.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028a.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992c-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353c0 1.795 2.091 3.256 4.669 3.256c2.577 0 4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353c.401-.181.688-.592.688-1.069c0-.65-.525-1.165-1.165-1.165z"></path>
+                  </g>
+                </svg>
+              </a>
+              <a href="https://mobile.twitter.com/goosehonk target="_blank" rel="noopener noreferrer">
+                <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334c0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518a3.301 3.301 0 0 0 1.447-1.817a6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429a3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218a3.203 3.203 0 0 1-.865.115a3.23 3.23 0 0 1-.614-.057a3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                  </g>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          <nav class="flex justify-center w-full">
+            <!--[-->
+            <a href="https://www.dextools.io/app/bsc/pair-explorer/0xd53e722d3e4f0b93c96b53646f04adb7c095dbf2" target="_blank" rel="noopener noreferrer" class="mr-3 block">DexTools</a>
+            <a href="https://poocoin.app/tokens/0x0712bc03807ebacc3a457a7149e7ab3bcd2e8009" target="_blank" rel="noopener noreferrer" class="mr-3 block">PooCoin</a>
+            <a href="https://charts.bogged.finance/0x0712bc03807EBacC3a457a7149E7Ab3bCD2e8009" target="_blank" rel="noopener noreferrer" class="block">BOGCharts</a>
+            <!--]-->
+          </nav>
+          <!--]-->
+          <p>If you mess with the Honk, you get the Bonk! NO DOGES ARE SAFE. If we see a doge, we honk it! GooseHonk (GOHO) is a crypto memetoken on Binance Smart Chain (BSC)</p>
+          <p>As a 1:1 fork of SafeMoon, GOHO has deflationary properties with <b>automatic yield generation</b> resulting from a 10% tax on all GOHO transactions, with 5% distributed to the Pancakeswap liquidity pool and the other <b>5% distributed to fellow GooseHonkers who hold GOHO</b>. </p>
+          <p>Address:</p>
+          <pre class="!my-2">0x0712bc03807ebacc3a457a7149e7ab3bcd2e8009</pre>
+          <a class="mt-8 mr-1 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm !text-white bg-doge-500 hover:bg-doge-700 focus:outline-none focus:ring-2 !no-underline focus:ring-offset-2 focus:ring-doge-500" href="https://poocoin.app/tokens/0x0712bc03807ebacc3a457a7149e7ab3bcd2e8009">Get GOHO</a>
+          <a class="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm !text-white bg-doge-500 hover:bg-doge-700 focus:outline-none focus:ring-2 !no-underline focus:ring-offset-2 focus:ring-doge-500" href="">GOHO SWAP (Coming Soon)</a>
+          <br>
+          <p class="text-sm">
+            <a href="/roadmap" class="mr-2">Roadmap (Coming Soon)</a>
+            <a href="/whitepaper" class="">Whitepaper (Coming Soon)</a>
+          </p>
+        </div>
+        <div id="rubic-widget-root" class="my-6"></div>
+        <div class="bg-doge-500">
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2 class="text-3xl text-white font-extrabold sm:text-4xl">Tokenomics</h2>
+            </div>
+            <dl class="mt-10 text-center text-white sm:max-w-3xl sm:mx-auto sm:flex sm:flex-wrap sm:justify-center">
+              <div class="flex-grow"></div>
+              <!--[-->
+              <div class="flex flex-col w-60 my-4 mx-auto">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Liquidity burned <p class="text-sm font-extralight mt-2 px-4">By sending all LP tokens to the zero &amp; burn address, liquidity was locked forever. <br>
+                    <a class="underline leading-6 font-medium" href="https://bscscan.com/tx/0xd6de444d846b18db1f00c568489558bb70b22e0511206f6896b911643341e2e2">See on BscScan</a>
+                  </p>
+                </dt>
+                <dd class="order-1 text-xl font-bold">
+                  <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-24 w-24 mx-auto">
+                    <path d="M17 9V7A5 5 0 0 0 7 7v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9zm9 12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1z" fill="currentColor"></path>
+                  </svg>
+                </dd>
+              </div>
+              <div class="flex flex-col w-60 my-4 mx-auto">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Ownership renounced <p class="text-sm font-extralight mt-2 px-4">To prevent manipulation of tax fees, ownership of the contract was renounced. <br>
+                    <a class="underline leading-6 font-medium" href="https://bscscan.com/tx/0x9272c7b4b6a1eaa25f092b565f5d9c79a5691ea1da431b2c340911876283b015">See on BscScan</a>
+                  </p>
+                </dt>
+                <dd class="order-1 text-xl font-bold">
+                  <span class="inline-block text-8xl h-24 w-24 mx-auto">
+                    <code>0</code>
+                  </span>
+                </dd>
+              </div>
+              <!--]-->
+              <div class="flex-grow"></div>
+            </dl>
+            <dl class="mt-10 text-center text-white sm:max-w-3xl sm:mx-auto sm:flex sm:flex-wrap sm:justify-center">
+              <!--[-->
+              <div class="flex flex-col my-4 mx-auto">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Total Supply <p class="text-sm font-extralight mt-2 px-4">1,000,000,000,000,000 GOHO <br>
+                    <a class="underline leading-6 font-medium" href="https://bscscan.com/token/0xdfaabaa57dec10c049335bdaa2e949b4ce2ead30">See on BscScan</a>
+                  </p>
+                </dt>
+                <dd class="order-1 text-xl font-bold">
+                  <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-24 w-24 mx-auto">
+                    <path d="M20 1H4a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3zM8 21H4a1 1 0 0 1-1-1v-1.18A3 3 0 0 0 4 19h4zm0-4H4a1 1 0 0 1-1-1v-1.18A3 3 0 0 0 4 15h4zm0-4H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4zm6 8h-4v-6h4zm0-8h-4V3h4zm7 7a1 1 0 0 1-1 1h-4v-2h4a3 3 0 0 0 1-.18zm0-4a1 1 0 0 1-1 1h-4v-2h4a3 3 0 0 0 1-.18zm0-4a1 1 0 0 1-1 1h-4V3h4a1 1 0 0 1 1 1zm-3-5a1 1 0 1 0 1 1a1 1 0 0 0-1-1zM6 9a1 1 0 1 0-1-1a1 1 0 0 0 1 1z" fill="currentColor"></path>
+                  </svg>
+                </dd>
+              </div>
+              <div class="flex flex-col my-4 mx-auto">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Burned <p class="text-sm font-extralight mt-2 px-4">800,000,000,000,000 80% <br>
+                    <a class="underline leading-6 font-medium" href="https://bscscan.com/tx/0xbf147261a3dde45648c07d8fc6f209c9d19f0e757226b2ef41c92843d1e9beab">See on BscScan</a>
+                  </p>
+                </dt>
+                <dd class="order-1 text-xl font-bold">
+                  <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-24 w-24 mx-auto">
+                    <path d="M8.468 8.395l-.002.001l-.003.002zm9.954-.187a1.237 1.237 0 0 0-.23-.175a1 1 0 0 0-1.4.411a5.782 5.782 0 0 1-1.398 1.778a8.664 8.664 0 0 0 .134-1.51a8.714 8.714 0 0 0-4.4-7.582a1 1 0 0 0-1.492.806a7.017 7.017 0 0 1-2.471 4.942l-.23.187a8.513 8.513 0 0 0-1.988 1.863a8.983 8.983 0 0 0 3.656 13.908a1 1 0 0 0 1.377-.926a1.05 1.05 0 0 0-.05-.312a6.977 6.977 0 0 1-.19-2.581a9.004 9.004 0 0 0 4.313 4.016a.997.997 0 0 0 .715.038a8.995 8.995 0 0 0 3.654-14.863zm-3.905 12.831a6.964 6.964 0 0 1-3.577-4.402a8.908 8.908 0 0 1-.18-.964a1 1 0 0 0-.799-.845a.982.982 0 0 0-.191-.018a1 1 0 0 0-.867.5a8.959 8.959 0 0 0-1.205 4.718a6.985 6.985 0 0 1-1.176-9.868a6.555 6.555 0 0 1 1.562-1.458a.745.745 0 0 0 .075-.055s.296-.245.306-.25a8.968 8.968 0 0 0 2.9-4.633a6.736 6.736 0 0 1 1.385 8.088a1 1 0 0 0 1.184 1.418a7.856 7.856 0 0 0 3.862-2.688a7 7 0 0 1-3.279 10.457z" fill="currentColor"></path>
+                  </svg>
+                </dd>
+              </div>
+              <div class="flex flex-col my-4 mx-auto">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">PancakeSwap Liquidity <p class="text-sm font-extralight mt-2 px-4">
+                    <br>
+                    <a class="underline leading-6 font-medium" href="https://bscscan.com/token/0xd53e722d3e4f0b93c96b53646f04adb7c095dbf2">See on BscScan</a>
+                  </p>
+                </dt>
+                <dd class="order-1 text-xl font-bold">
+                  <svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-24 w-24 mx-auto">
+                    <path d="M10.46 6l.54-.59V9a1 1 0 0 0 2 0V5.41l.54.55A1 1 0 0 0 15 6a1 1 0 0 0 0-1.42l-2.29-2.29a1 1 0 0 0-.33-.21a1 1 0 0 0-.76 0a1 1 0 0 0-.33.21L9 4.54A1 1 0 0 0 10.46 6zM12 12a3 3 0 1 0 3 3a3 3 0 0 0-3-3zm0 4a1 1 0 1 1 1-1a1 1 0 0 1-1 1zm-7-1a1 1 0 1 0 1-1a1 1 0 0 0-1 1zm14 0a1 1 0 1 0-1 1a1 1 0 0 0 1-1zm1-7h-4a1 1 0 0 0 0 2h4a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h4a1 1 0 0 0 0-2H4a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3z" fill="currentColor"></path>
+                  </svg>
+                </dd>
+              </div>
+              <!--]-->
+            </dl>
+          </div>
+        </div>
+        <!--[-->
+    
+        <!--]-->
+        <!--[-->
+        
+        <!--]-->
+        <div class="prose prose-xl text-center mx-auto px-2 lg:px-0 my-12">
+          <h2>Reflection Tracker</h2>
+          <p>See how much you've earned just by holding GOHO tokens:</p>
+          <iframe id="iframe-trackbsc" class="w-full min-h-1xl lg:min-h-2xl mx-auto" src="https://trackbsc.com/earnings?token=0x0712bc03807ebacc3a457a7149e7ab3bcd2e8009"></iframe>
+          <p class="text-sm text-gray-400">Tool: TrackBSC by OnlyOneToken.</p>
+        </div>
+        <div class="bg-white py-16 sm:py-24 overflow-hidden">
+          <div class="relative sm:py-16">
+            <div aria-hidden="true" class="hidden sm:block">
+              <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl"></div>
+              <svg class="absolute top-8 left-1/2 -ml-3" width="404" height="392" fill="none" viewBox="0 0 404 392">
+                <defs>
+                  <pattern id="8228f071-bcee-4ec8-905a-2a059a2cc4fb" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"></rect>
+                  </pattern>
+                </defs>
+                <rect width="404" height="392" fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)"></rect>
+              </svg>
+            </div>
+            <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+              <div class="relative rounded-2xl px-6 py-10 bg-doge-500 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+                <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
+                  <svg class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360">
+                    <path class="text-doge-200 text-opacity-40" fill="currentColor" d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"></path>
+                    <path class="text-doge-700 text-opacity-40" fill="currentColor" d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"></path>
+                  </svg>
+                </div>
+                <div class="relative">
+                  <div class="sm:text-center">
+                    <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Join the #GooseHonk community! </h2>
+                    <p class="mt-6 mx-auto max-w-2xl text-lg text-white">We are a rapidly growing Telegram chat.</p>
+                  </div>
+                  <div class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+                    <a role="button" href="https://t.me/goosehonk" target="_blank" rel="noopener noreferrer" class="block mx-auto w-full max-w-64 rounded-md border border-transparent px-5 py-3 bg-white text-base font-medium shadow hover:bg-blue-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-gray-700 focus:ring-offset-2 focus:ring-offset-doge-700 sm:px-10 text-center">Join on Telegram</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--]-->
+        <footer class="">
+          <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+              <!--[-->
+              <div class="px-5 py-2">
+                <a aria-current="page" href="/" class="router-link-active router-link-exact-active text-base text-gray-500 hover:text-gray-900">Home</a>
+              </div>
+              <div class="px-5 py-2">
+                <a href="/roadmap" class="text-base text-gray-500 hover:text-gray-900">Roadmap</a>
+              </div>
+              <div class="px-5 py-2">
+                <a href="/whitepaper" class="text-base text-gray-500 hover:text-gray-900">Whitepaper</a>
+              </div>
+              <div class="px-5 py-2">
+                <a href="https://t.me/goosehonk" target="_blank" rel="noopener noreferrer" class="text-base text-gray-500 hover:text-gray-900">Telegram</a>
+              </div>
+              <div class="px-5 py-2">
+                <a href="mailto:" target="_blank" rel="noopener noreferrer" class="text-base text-gray-500 hover:text-gray-900">Contact</a>
+              </div>
+              <!--]-->
+            </nav>
+            <div class="prose text-center text-center mx-auto mt-4">
+              <p class="text-sm">If you would like to contribute to our community, please feel free to donate BNB to our community wallet. The funds will be used for charitable donations and for marketing!</p>
+              <p class="text-sm">ATTENTION: This wallet is a Binance Smart Chain wallet and can only accept donations of BEP-20 BNB.</p>
+              <pre>0xb4FF087374F15F77FCab1bfe17bB98A4b77Bb9d2</pre>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">Disclaimer: creators and maintainers of GooseHonk/GOHO are not liable for any loss when trading this cryptocurrency token. Nothing on this page is financial advice.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.__INITIAL_STATE__ = '{"pinia":{}}'
+    </script>
+    <link rel="stylesheet" href="/assets/app.51f3ad5a.css">
+  </body>
+</html>

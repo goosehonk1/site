@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HonkSwap - One stop-shop for GooseHonk</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <script async src="https://unpkg.com/thesemetrics@latest"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@300&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body,
+    #app,
+    #bg {
+      margin: 0;
+      min-height: 100vh;
+      font-size: 16px;
+    }
+
+    #app {
+      position: relative;
+    }
+
+    #bg {
+      top: 0;
+      left: 0;
+    }
+
+    main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    *,
+    ::before,
+    ::after {
+      border-width: 0px;
+      border-style: solid;
+      box-sizing: border-box;
+    }
+
+    section {
+      margin: 0 auto;
+      width: 552px;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      text-shadow: rgb(0 0 0 / 20%) 2px 8px 6px, rgb(255 255 255 / 30%) 0px -5px 35px;
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 2rem;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+   h3 {
+      text-shadow: rgb(0 0 0 / 20%) 2px 8px 6px, rgb(255 255 255 / 30%) 0px -5px 35px;
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 1rem;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    li {
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+      border-width: 2px;
+      border-color: #ffffff29;
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease 0s;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px 0px, rgba(0, 0, 0, 0.4) 0px 15px 20px 0px;
+      background-color: rgba(255, 255, 255, 20%);
+    }
+
+    li:hover {
+      background-color: rgba(184, 255, 152, 0.2);
+    }
+
+    li>a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .icon {
+      color: black;
+      margin-right: 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div id="app">
+    <div id="bg"></div>
+    <main>
+      <section>
+
+        <h1>Welcome to GooseHonk 🔨</h1>
+
+        <ul>
+          <li>
+            <a href="https://trustwallet.com/">
+              <div class="icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em"
+                  width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+                  </path>
+                </svg>
+              </div>
+              <div>I need a crypto wallet</div>
+            </a>
+          </li>
+          <li>
+            <a href="https://changenow.io/exchange?from=usd&to=bnbbsc&fiatMode=true&amount=50">
+              <div class="icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1.5em"
+                  width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z">
+                  </path>
+                </svg>
+              </div>
+              <div>Buy BNB with Credit Card</div>
+            </a>
+          </li>
+          <li>
+            <a href="https://app.bogged.finance/swap?tokenIn=BNB&tokenOut=0x0712bc03807ebacc3a457a7149e7ab3bcd2e8009">
+
+              <div class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                  height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z">
+                  </path>
+                </svg>
+              </div>
+              <div>Buy GooseHonk tokens (Swap BNB for GOHO)</div>
+            </a>
+          </li>
+        </ul>
+		              <H3>If you mess witht the Honk, you get the Bonk!</H1>
+      </section>
+    </main>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+VANTA.BIRDS({
+  el: "#bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xfafafa,
+  color1: 0x79ed,
+  color2: 0x2b0a84,
+  birdSize: 1.60
+})
+</script>
+</body>
+
+</html>
